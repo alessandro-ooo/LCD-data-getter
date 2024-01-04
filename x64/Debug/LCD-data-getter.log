@@ -1,7 +1,0 @@
-﻿  LCD-data-getter.cpp
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
-C:\Users\Alessandro\source\repos\LCD-data-getter\LCD-data-getter\LCD-data-getter.cpp(49,24): warning C4477: 'printf': con la stringa di formato '%s' è necessario un argomento di tipo 'char *', ma il tipo dell'argomento variadic 1 è 'int'
-C:\Users\Alessandro\source\repos\LCD-data-getter\LCD-data-getter\LCD-data-getter.cpp(49,24): warning C4313: 'printf': '%s' nella stringa di formato è in conflitto con l'argomento 1 di tipo 'int'
-C:\Users\Alessandro\source\repos\LCD-data-getter\LCD-data-getter\LCD-data-getter.cpp(63,23): warning C4244: 'return': conversione da 'double' a 'int'. Possibile perdita di dati.
-C:\Users\Alessandro\source\repos\LCD-data-getter\LCD-data-getter\LCD-data-getter.cpp(54): warning C4715: 'Weather::getWeather': non tutti i percorsi di controllo restituiscono un valore
-  LCD-data-getter.vcxproj -> C:\Users\Alessandro\source\repos\LCD-data-getter\x64\Debug\LCD-data-getter.exe

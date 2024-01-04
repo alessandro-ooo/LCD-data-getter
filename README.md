@@ -1,1 +1,0 @@
-# LCD-data-getter
