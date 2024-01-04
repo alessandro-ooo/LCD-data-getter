@@ -7,12 +7,13 @@ using namespace std;
 #include <ctime>
 #include <chrono>
 #include <stdio.h>
+#include "json.h"
 #include "curl/curl.h"
 #include "SimpleSerial.h"
 
 #define LAT 40.899
 #define LON 14.3528
-#define API_KEY "YOUR_API_KEY_HERE"
+#define API_KEY "71f91b67c843fca6b1d591117c0fc73d"
 
 
 class Weather {
@@ -46,7 +47,8 @@ public:
            }
 
             if (res == CURLE_OK) {
-                printf("%s", res);
+                //printf("%s", res);
+                getK(to_string(res));
             }
             
             curl_easy_cleanup(curl);
@@ -54,7 +56,9 @@ public:
     }
 
     const int getK(string json) {
-        const int K = 
+        string tempKey = "\"temp\":";
+        const int K = json.find(tempKey);
+        return K;
     }
 
 private: 
