@@ -1,1 +1,7 @@
-﻿  LCD-data-getter.vcxproj -> C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\x64\Debug\LCD-data-getter.exe
+﻿  LCD-data-getter.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\LCD-data-getter\LCD-data-getter.cpp(62,32): warning C4267: 'inizializzazione': conversione da 'size_t' a 'int'. Possibile perdita di dati.
+C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\LCD-data-getter\LCD-data-getter.cpp(62,21): warning C4267: 'inizializzazione': conversione da 'size_t' a 'const int'. Possibile perdita di dati.
+C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\LCD-data-getter\LCD-data-getter.cpp(69,23): warning C4244: 'return': conversione da 'double' a 'int'. Possibile perdita di dati.
+C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\LCD-data-getter\LCD-data-getter.cpp(58): warning C4715: 'Weather::getWeather': non tutti i percorsi di controllo restituiscono un valore
+  LCD-data-getter.vcxproj -> C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\x64\Debug\LCD-data-getter.exe
