@@ -1,4 +1,5 @@
 using namespace std;
+
 #pragma comment(lib, "libcurl_imp.lib")
 #pragma warning(disable : 4996)
 
@@ -6,77 +7,16 @@ using namespace std;
 #include <format>
 #include <ctime>
 #include <chrono>
-#include <stdio.h>
-#include "json.h"
-#include "curl/curl.h"
+#include <stdlib.h>
+#include <iostream>
+#include "json.hpp"
 #include "SimpleSerial.h"
+#include "Weather.h"
 
 #define LAT 40.899
 #define LON 14.3528
 #define API_KEY "71f91b67c843fca6b1d591117c0fc73d"
 
-
-class Weather {
-public:
-    int getWeather() {
-        CURL* curl;
-        CURLcode res;
-
-        curl_global_init(CURL_GLOBAL_DEFAULT);
-
-        curl = curl_easy_init();
-        if (curl) {
-
-           char weatherAPI[256];
-           sprintf(weatherAPI, "http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s", LAT, LON, API_KEY);
-           curl_easy_setopt(curl, CURLOPT_URL, weatherAPI);
-
-                //curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
-                //curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
-                //curl_easy_setopt(curl, CURLOPT_CA_CACHE_TIMEOUT, 604800L);
-           curl_easy_setopt(curl, CURLOPT_HTTP_VERSION, (long)CURL_HTTP_VERSION_3);
-
-           res = curl_easy_perform(curl);
-
-           if (res != CURLE_OK){
-                fprintf(stderr, "curl_easy_perform() failed: %s\n",
-                curl_easy_strerror(res));
-                curl_easy_cleanup(curl);
-
-                return 1;
-           }
-
-            if (res == CURLE_OK) {
-                //printf("%s", res);
-                getK(to_string(res));
-            }
-            
-            curl_easy_cleanup(curl);
-        }
-    }
-
-    const int getK(string json) {
-        string tempKey = "\"temp\":";
-        const int K = json.find(tempKey);
-        return K;
-    }
-
-private: 
-    const double absoluteZero = 273.15;
-     int KtoC(int kelvin) {
-        return kelvin - absoluteZero;
-    }
-};
-
-class Reader {
-public:
-    void request(string request) {
-        if (strcmp(request.c_str(), "weather") == 0) {
-            Weather weather;
-            weather.getWeather();
-        }
-    }
-};
 
 string getTime() {
     time_t now = time(0);

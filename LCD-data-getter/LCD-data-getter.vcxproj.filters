@@ -32,35 +32,8 @@
     <ClInclude Include="SimpleSerial.h">
       <Filter>File di risorse\SimpleSerial</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\jsoncpp-1.9.5\include\json\config.h">
-      <Filter>File di risorse\jsoncpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\jsoncpp-1.9.5\include\json\forwards.h">
-      <Filter>File di risorse\jsoncpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\jsoncpp-1.9.5\include\json\json.h">
-      <Filter>File di risorse\jsoncpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\jsoncpp-1.9.5\include\json\json_features.h">
-      <Filter>File di risorse\jsoncpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\jsoncpp-1.9.5\include\json\reader.h">
-      <Filter>File di risorse\jsoncpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\jsoncpp-1.9.5\include\json\value.h">
-      <Filter>File di risorse\jsoncpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\jsoncpp-1.9.5\include\json\version.h">
-      <Filter>File di risorse\jsoncpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\jsoncpp-1.9.5\include\json\writer.h">
-      <Filter>File di risorse\jsoncpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\jsoncpp-1.9.5\include\json\allocator.h">
-      <Filter>File di risorse\jsoncpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\..\Desktop\jsoncpp-1.9.5\include\json\assertions.h">
-      <Filter>File di risorse\jsoncpp</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".env" />
   </ItemGroup>
 </Project>
