@@ -27,10 +27,28 @@
     <ClCompile Include="SimpleSerial.cpp">
       <Filter>File di risorse\SimpleSerial</Filter>
     </ClCompile>
+    <ClCompile Include="Reader.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
+    <ClCompile Include="Weather.cpp">
+      <Filter>File di origine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SimpleSerial.h">
       <Filter>File di risorse\SimpleSerial</Filter>
+    </ClInclude>
+    <ClInclude Include="Weather.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Reader.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Writer.h">
+      <Filter>File di intestazione</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>File di intestazione</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
