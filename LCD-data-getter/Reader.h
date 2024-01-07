@@ -1,13 +1,22 @@
 using namespace std;
 #include "Weather.h"
+#include "Time.h"
 #include <string>
 
 class Reader {
 public:
-    void request(string request) {
+    string request(string request) 
+    {
         if (strcmp(request.c_str(), "weather") == 0) {
             Weather weather;
-            weather.getWeather();
+            return weather.getWeather();
         }
+
+        if (strcmp(request.c_str(), "time") == 0) {
+            Time time;
+            return time.getTime();
+        }
+
+        return "";
     }
 };
