@@ -32,6 +32,9 @@ public:
 	void init(char* com_port, DWORD COM_BAUD_RATE);
 
 	string ReadSerialPort(int reply_wait_time, string syntax_type);	
+
+	string ReadSerialPortRaw(int max_wait_time, string syntax_type);
+
 	bool WriteSerialPort(char *data_sent);
 	bool CloseSerialPort();
 	~SimpleSerial();

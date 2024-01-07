@@ -135,6 +135,34 @@ void SimpleSerial::CustomSyntax(string syntax_type) {
 		printf ("Warning: No file open");
 }
 
+string SimpleSerial::ReadSerialPortRaw(int max_wait_time, string syntax_type)
+{
+	DWORD bytes_read;
+	char inc_msg[1];
+	string complete_inc_msg;
+	bool began = false;
+
+	CustomSyntax(syntax_type);
+
+	unsigned long start_time = time(nullptr);
+
+	ClearCommError(io_handler_, &errors_, &status_);
+
+	while ((time(nullptr) - start_time) < max_wait_time) {
+
+		if (status_.cbInQue > 0) {
+
+			while(ReadFile(io_handler_, inc_msg, 1, &bytes_read, NULL)) 
+			{
+				complete_inc_msg.append(inc_msg, bytes_read);
+			}
+			
+			//return "Warning: Failed to receive data.\n";
+		}
+	}
+	return complete_inc_msg;
+}
+
 string SimpleSerial::ReadSerialPort(int reply_wait_time, string syntax_type) {
 
 	DWORD bytes_read;
@@ -152,7 +180,7 @@ string SimpleSerial::ReadSerialPort(int reply_wait_time, string syntax_type) {
 
 		if (status_.cbInQue > 0) {
 			
-			if (ReadFile(io_handler_, inc_msg, 1, &bytes_read, NULL)) {
+			while (ReadFile(io_handler_, inc_msg, 1, &bytes_read, NULL)) {
 				
 				if (inc_msg[0] == front_delimiter_ || began) {
 					began = true;
@@ -164,8 +192,8 @@ string SimpleSerial::ReadSerialPort(int reply_wait_time, string syntax_type) {
 						complete_inc_msg.append(inc_msg, 1);
 				}				
 			}
-			else
-				return "Warning: Failed to receive data.\n";
+			//else
+			//return "Warning: Failed to receive data.\n";
 		}
 	}
 	return complete_inc_msg;		
