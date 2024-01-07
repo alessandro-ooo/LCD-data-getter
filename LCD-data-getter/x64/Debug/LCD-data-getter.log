@@ -3,8 +3,24 @@ C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.3313
 C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\LCD-data-getter\Weather.h(28,16): warning C4101: 'write': variabile locale senza riferimenti
   (compilazione del file di origine 'LCD-data-getter.cpp')
   
-C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\LCD-data-getter\Weather.h(79,23): warning C4244: 'return': conversione da 'double' a 'int'. Possibile perdita di dati.
+C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\LCD-data-getter\Weather.h(103,23): warning C4244: 'return': conversione da 'double' a 'int'. Possibile perdita di dati.
   (compilazione del file di origine 'LCD-data-getter.cpp')
   
+  Reader.cpp
+C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\LCD-data-getter\Weather.h(28,16): warning C4101: 'write': variabile locale senza riferimenti
+  (compilazione del file di origine 'Reader.cpp')
+  
+C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\LCD-data-getter\Weather.h(103,23): warning C4244: 'return': conversione da 'double' a 'int'. Possibile perdita di dati.
+  (compilazione del file di origine 'Reader.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\format(42): warning STL4038: The contents of <format> are available only with C++20 or later.
+  Weather.cpp
+C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\LCD-data-getter\Weather.h(28,16): warning C4101: 'write': variabile locale senza riferimenti
+  (compilazione del file di origine 'Weather.cpp')
+  
+C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\LCD-data-getter\Weather.h(103,23): warning C4244: 'return': conversione da 'double' a 'int'. Possibile perdita di dati.
+  (compilazione del file di origine 'Weather.cpp')
+  
+  Generazione del codice in corso...
 C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\LCD-data-getter\Weather.h(73): warning C4715: 'Weather::getWeather': non tutti i percorsi di controllo restituiscono un valore
   LCD-data-getter.vcxproj -> C:\Users\Alessandro\Documents\GitHub\LCD-data-getter\x64\Debug\LCD-data-getter.exe

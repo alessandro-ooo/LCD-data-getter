@@ -61,15 +61,39 @@ public:
 
                 cout << response << endl;
                 const double K = j["main"]["temp"];
-                string status = j["weather"][0]["main"];
+                string condition = j["weather"][0]["main"];
 
                 const int C = KtoC(K);
-                cout << to_string(C) + "C " + status << endl;
-                return weather = to_string(C) + "C " + status;
+                cout << to_string(C) + "C " + condition << endl;
+                return weather = to_string(C) + "C " + translate(condition);
             }
 
             curl_easy_cleanup(curl);
         }
+    }
+
+    string translate(string condition) {
+        if (condition == "Rain") {
+            return "pioggia";
+        }
+
+        if (condition == "Clear") {
+            return "soleggiato";
+        }
+
+        if (condition == "Clouds") {
+            return "nuvoloso";
+        }
+
+        if (condition == "Snow") {
+            return "neve";
+        }
+
+        if(condition == "Thunderstorm") {
+            return "tempesta";
+        }
+
+        return condition;
     }
 
 private:
