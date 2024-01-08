@@ -11,7 +11,7 @@ using namespace std;
 
 #define LAT 40.899
 #define LON 14.3528
-#define API_KEY "71f91b67c843fca6b1d591117c0fc73d"
+#define API_KEY "YOUR API KEY HERE"
 
 class Weather {
 public:
