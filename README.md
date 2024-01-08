@@ -20,8 +20,8 @@ This software is by no means complete AND/OR indicated for professional use, it 
 
 ## How does everything work?
 
-Basically, when the board is connected through USB to the computer, it "awaits" for data. It means that the arduino board sends (through serial communication) "<weather>" string to the software, the software "reads" and gets the weather data through ```LAT``` and ```LOG``` of your location, which it would be hard coded in the software.
-The weather forecast is gathered through an API call to <a href="https://openweathermap.org/">https://openweathermap.org/</a> every ten minutes using the <a href="https://curl.se/">CURL library</a>. Once the weather data is stored in Arduino, the board will keep communicating to the software "<time>" string every second and will receive time and date to display on the LCD. It'll be possible to display the weather pressing a button.
+Basically, when the board is connected through USB to the computer, it "awaits" for data. It means that the arduino board sends (through serial communication) ```<weather>``` string to the software, the software "reads" and gets the weather data through ```LAT``` and ```LOG``` of your location, which it would be hard coded in the software.
+The weather forecast is gathered through an API call to <a href="https://openweathermap.org/">https://openweathermap.org/</a> every ten minutes using the <a href="https://curl.se/">CURL library</a>. Once the weather data is stored in Arduino, the board will keep communicating to the software ```<time>``` string every second and will receive time and date to display on the LCD. It'll be possible to display the weather pressing a button.
 
 ## Docs
 
